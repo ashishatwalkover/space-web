@@ -1,0 +1,156 @@
+body{
+	margin: 0;
+	padding: 0;
+    font-family: 'Roboto', sans-serif;;
+	color: #000000;
+}
+.home-body {
+    height: 100%;    
+}
+
+h1,h2,h3,h4,h5,h5,p,ul,ol,figure{
+	margin: 0; 
+	padding: 0;
+}
+button:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.section .container, .container-fluid{
+    margin: auto;
+}
+.section{
+    display: flex;
+    min-height: 100vh;
+}
+
+.p-lg{
+    padding: 80px 130px;
+}   
+.px-lg{
+    padding: 0px 130px;
+}   
+
+/* Default Background Color */
+.bg-section-primary{
+    background-color: #f7f6f4;
+}
+.bg-section-secondary{
+    background-color: #f2f0e9;
+}
+
+/* Header */
+.header .navbar-collapse .nav-link{
+    font-size: 24px;
+    line-height: 28px;
+    color:#000000;
+}
+/* Card */
+.card{
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 4px;
+}
+.card .card-body{
+    padding: 38px 57px;
+}
+
+/* Comman style  */
+.section-card-title{
+    font-size: 70px;
+    line-height: 82px;
+    font-weight: bold;
+}
+.section-card-desc{
+    font-size: 28px;
+    line-height: 33px;
+    font-weight: normal;
+}
+.section-card-desc-secondary{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: normal;
+}
+
+
+
+/* Member Card */
+.member-card img{
+    margin-bottom: 25px;
+}
+.member-card .member-name{
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+}
+.member-card .member-position{
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+}
+
+/* Secation */
+.section-first .input-custome input.form-control{
+    height: 70px;
+    background: #FFFFFF;
+    border: 2px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 4px !important;
+    padding:24px;
+    padding-right: 240px;
+    position: relative;
+}
+.section-first .input-custome input:focus{
+    box-shadow: none;
+}
+.section-first .input-custome .input-group-prepend{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    z-index: 99;
+}
+.section-first .input-custome .input-group-prepend>input{
+    width:222px;
+    background: #1271D8;
+    border-radius: 4px !important;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+} 
+.section-first .input-info{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+}
+.section-first .input-info span{font-weight: 700;}
+.section-second .card-body,
+.section-third .card-body,.section-forth .card-body{padding:60px;}
+.section-six .card-body{
+    padding: 100px 88px;
+}
+
+
+/* Footer */
+.footer p, .footer a{
+    font-size: 16px;
+    line-height: 19px;
+    color:#000000;
+    text-decoration: none;
+}
+.footer p{
+    font-weight: 700;
+}
+.footer h6{
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: normal;
+    text-align: center;
+
+color: #919191;
+}
+.footer p>span{
+    font-weight: 400;
+}
