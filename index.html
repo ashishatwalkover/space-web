@@ -4,8 +4,9 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="cf-2fa-verify" content="a78578b12c19bed">
     <!-- Page Title -->
-    <title>Space</title>
+    <title>Space Suite</title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -30,7 +31,7 @@
               <div class="navbar-collapse collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                   <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0);">Login</a>
+                    <a class="nav-link" href="https://app.intospace.io">Login</a>
                   </li>
                 </ul>
               </div>
@@ -46,16 +47,29 @@
                 <div class="col-lg-7">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="section-card-title mb-4">Document based Task management tool.</h5>
-                            <p class="section-card-desc">Emphasize your priority,  being focused and simplicity are three major USP of Space</p>
+                            <h5 class="section-card-title mb-4">Document-based collaboration tool</h5>
+                            <p class="section-card-desc">Brainstorm, plan and write in a single tool.</p>
+                            <form onsubmit="betaRequest(event, this);">
                             <div class="input-group input-custome position-relative mb-2" style="margin-top:89px">
-                                <input type="text" class="form-control rounded-0" id="" placeholder="Enter email id">
+                                <input 
+                                type="email " 
+                                class="form-control rounded-0" 
+                                name="emailId" 
+                                id="emailId" 
+                                placeholder="Enter email id"                                
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                required
+                                
+                                >
                                 <div class="input-group-prepend">
-                                  <input type="submit" value="Join Beta" class="btn btn-primary btn-sm rounded-0" id="inputGroupPrepend2">
+                                    <input type="submit" value="Join Beta" class="btn btn-primary btn-sm rounded-0">
                                 </div>
+                                </div>
+                            </form>
+                            <div class="text-muted">
+                                <p class="input-info mb-1">We are accepting Beta users only.</p>
+                                <p class="input-info">*Users you add in Beta are <strong>free for lifetime</strong> in your workspace</p>
                             </div>
-                            <p class="input-info mb-1">We are accepting Beta users only</p>
-                            <p class="input-info">*All users your add in Beta are <span>free for lifetime</span> in your workspace</p>
                         </div>
                     </div>
                 </div>
@@ -79,11 +93,16 @@
                 <div class="col-lg-7">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="section-card-title mb-4">Emapasize your priority with Space</h5>
-                            <p class="section-card-desc mb-4">Emphasize your priority,  being focused and simplicity are three major USP of Space</p>
-                            <p class="section-card-desc mb-4">We have built a new style documentation managing platform from the ground up to better support, creative thinking. Space lets you explode traditional documents and work in a more free-form manner for better brainstorming, mind-mapping, and exploration.</p>
-                            <p class="section-card-desc mb-4">Now you can manage your tasks and knowledgebase with simplicity. Space is easy to manage and search the document you have created.</p>
-                            <img src="assets/images/panel.svg" alt="sapce panel" class="w-100">
+                            <h5 class="section-card-title mb-4">Maintain your productivity</h5>
+                            <p class="section-card-desc mb-4">Priority, Focus and Simplicity are the three major points that can keep you productive all the time.</p>
+                            <p class="section-card-desc mb-4">We have built a new style documentation managing platform from the ground up to facilitate your creative thinking with better support. Space lets you explore traditional documents, but helps you work in a more free-form manner for better brainstorming, mind-mapping, and exploration.</p>
+                            <p class="section-card-desc mb-4">Manage your tasks and knowledge-base with simplicity. </p>
+                            <p class="section-card-desc mb-4">Space is easy to search and manage the document you have created.</p>
+                            <div class="pic-wrp">
+                                <img src="assets/images/spacer-table.svg" class="w-100">
+                                <img src="assets/images/priority-table.svg" id="priority-table" alt="sapce panel" class="w-100 panel-pic">
+                                <img src="assets/images/all-table.svg" id="all-table" alt="sapce panel" class="w-100 panel-pic" style="display: none;">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -99,8 +118,8 @@
                 <div class="col-lg-7">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="section-card-title mb-4">Create your own private doc and share them with concern one.</h5>
-                            <p class="section-card-desc mb-4">Creating doc was always easy but manging them was difficult till space introduced Private doc mangement. Space provides option create space doc or insert the existing google doc URL </p>
+                            <h5 class="section-card-title mb-4">Create your own private doc and share with collaborators</h5>
+                            <p class="section-card-desc mb-4">Creating docs was always easy, but managing them was difficult until Space introduced Private doc management. Create Space doc or include the existing Google doc URL.</p>
                         </div>
                     </div>
                 </div>
@@ -127,8 +146,8 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="section-card-title">Cmd/Ctrl+K</h5>
-                            <h5 class="section-card-title mb-4">Quickly search ideas, notes, and tasks.</h5>
-                            <p class="section-card-desc mb-4">Creating doc was always easy but manging them was difficult till space introduced Private doc mangement. Space provides option create space doc or insert the existing google doc URL </p>
+                            <h5 class="section-card-title mb-4">Quickly search for ideas, notes, and tasks.</h5>
+                            <p class="section-card-desc mb-4">We know searching docs was never easy, so we made it as frictionless as possible to search for things as they pop up in your mind. Open Space's command prompt with a simple keystroke, and it will interpret what you write to automatically log notes and search doc for you.</p>
                         </div>
                     </div>
                 </div>
@@ -145,25 +164,25 @@
                     <div class="card">
                         <div class="card-body text-center">
                             <h5 class="section-card-title mb-4">On a mission to unlock simplicity</h5>
-                            <p class="section-card-desc mb-5 pb-4">We've been building creative tools together for over a decade and have a deep appreciation for the needs creatives have while "in flow." We're dedicated to building better tools, so you can spend less time fighting with them and more time focused on bringing your ideas to life.</p>
+                            <p class="section-card-desc mb-5 pb-4">We've been building creative tools together for over a decade and have a deep appreciation for the needs creative minds have while "inflow." We're dedicated to building better tools, so you spend less time struggling with them and more time focusing on bringing your ideas to life.</p>
                             <div class="row">
                                 <div class="col-lg-3 member-card">
-                                    <img src="assets/images/pushpendra_agrawal.png" alt="Pushpendra Agrawal" class="img-fluid">
+                                    <img src="assets/images/pushpendra.png" alt="Pushpendra Agrawal" class="img-fluid">
                                     <h6 class="member-name">Pushpendra Agrawal</h6>
                                     <span class="member-position">The Idea guy</span>
                                 </div>
                                 <div class="col-lg-3 member-card">
-                                    <img src="assets/images/priyanka_pathak.png" alt="Priyanka Pathak" class="img-fluid">
+                                    <img src="assets/images/priyanka.png" alt="Priyanka Pathak" class="img-fluid">
                                     <h6 class="member-name">Priyanka Pathak</h6>
                                     <span class="member-position">CTO</span>
                                 </div>
                                 <div class="col-lg-3 member-card">
-                                    <img src="assets/images/ashish_yadav.png" alt="Ashish Yadav" class="img-fluid">
+                                    <img src="assets/images/ashish.png" alt="Ashish Yadav" class="img-fluid">
                                     <h6 class="member-name">Ashish Yadav</h6>
                                     <span class="member-position">CDO</span>
                                 </div>
                                 <div class="col-lg-3 member-card">
-                                    <img src="assets/images/ravi_paliwal.png" alt="Ravi Paliwal" class="img-fluid">
+                                    <img src="assets/images/ravi.png" alt="Ravi Paliwal" class="img-fluid">
                                     <h6 class="member-name">Ravi Paliwal</h6>
                                     <span class="member-position">COO</span>
                                 </div>
@@ -181,9 +200,9 @@
         <div class="container-fluid p-lg">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <img src="assets/images/space-square-logo.svg" alt="Space Logo" style="margin-bottom: 102px;">
+                    <img src="assets/images/space-square-logo.svg" alt="Space Logo" style="margin-bottom: 102px;" class="space-icon">
                     <h5 class="section-card-title mb-4">Simple, Beautiful, Fast</h5>
-                    <p class="section-card-desc-secondary mb-5 pb-4">Up next <span class="d-block">OKR, Timesheet, Conference calls</span></p>
+                    <p class="section-card-desc-secondary mb-5 pb-4">Coming soon <span class="d-block">Realtime collaboration, Publish documents, White label domain</span></p>
                 </div>
             </div>
             
@@ -196,25 +215,55 @@
         <div class="container-fluid p-lg py-3 bg-section-primary">
             <div class="row d-flex align-items-end">
                 <div class="col-lg-3 ">
-                    <p>SPACE <span>By Walkover</span></p>
+                    SPACE <a href="https://walkover.in" target="_blank">By Walkover</a>
                 </div>
                 <div class="col-lg-6 text-center">
-                    <h6 class="mb-4">Available on</h6>
+                    <!-- <h6 class="mb-4">Available on</h6>
                     <a href="javascript:void(0);" class="mr-3"><img src="assets/images/chrome.svg" alt="" width="35"></a>
                     <a href="javascript:void(0);" class="mr-3"><img src="assets/images/linux.svg" alt="" width="35"></a>
                     <a href="javascript:void(0);" class="mr-3"><img src="assets/images/monitor.svg" alt="" width="35"></a>
                     <a href="javascript:void(0);" class="mr-3"><img src="assets/images/windows.svg" alt="" width="35"></a>
                     <a href="javascript:void(0);" class="mr-3"><img src="assets/images/android-logo.svg" alt="" width="35"></a>
-                    <a href="javascript:void(0);" class="mr-3"><img src="assets/images/mac-os-logo.svg" alt="" width="35"></a>
+                    <a href="javascript:void(0);" class="mr-3"><img src="assets/images/mac-os-logo.svg" alt="" width="35"></a> -->
                 </div>
                 <div class="col-lg-3">
-                    <a href="javascript:void(0);" class="mr-3">Privacy policy</a>
-                    <a href="javascript:void(0);">Terms & conditions</a>
+                    <a href="https://docs.google.com/document/d/1eg0UTjn7wwirLg1XRFzslWaJ0YUF3f8ZOgmbmynSZCM" class="mr-3" target="_blank">Privacy policy</a>
+                    <a href="https://docs.google.com/document/d/1ubIWE-SIZ8Z4b2lFB5iafkquXfNuRJrzOuE10KT_eW8" target="_blank">Terms & conditions</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Footer:END -->
+    
+<script src="./assets/js/jquery-1.9.1.min.js"></script>
 
+<script>
+    function betaRequest(e, ts){
+        e.preventDefault();
+        var email = $("#emailId").val();
+        window.open('https://sokt.io/forms/iVhg.html?email='+ email, '_blank');
+        var request = $.ajax({
+            url: "https://sokt.io/RqXu62HY7FwysqEuVaFy/space-space-beta-user",
+            type: "POST",
+            data: $(ts).serialize(),
+            success: function(res){
+                console.log('response',res);
+            }            
+        });
+    }
+        
+    var all = false;
+    setInterval(function(){
+        if(all){
+            $("#priority-table").fadeOut()
+            $("#all-table").fadeIn()
+            all = false;
+        } else {
+            $("#priority-table").fadeIn()
+            $("#all-table").fadeOut()
+            all = true;
+        }
+    },3000)
+</script>
 </body>
 </html>

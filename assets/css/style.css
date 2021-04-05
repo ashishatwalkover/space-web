@@ -62,14 +62,12 @@ button:focus{
     font-weight: bold;
 }
 .section-card-desc{
-    font-size: 28px;
-    line-height: 33px;
-    font-weight: normal;
+    font-size: 28px;    
+    font-weight: 300;
 }
 .section-card-desc-secondary{
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: normal;
+    font-size: 24px;    
+    font-weight: 300;
 }
 
 
@@ -132,6 +130,9 @@ button:focus{
     padding: 100px 88px;
 }
 
+.space-icon{
+    width: 180px;
+}
 
 /* Footer */
 .footer p, .footer a{
@@ -153,4 +154,13 @@ color: #919191;
 }
 .footer p>span{
     font-weight: 400;
+}
+
+.pic-wrp{
+    position: relative;
+}
+.panel-pic{
+    position: absolute;
+    top:0;
+    left: 0;
 }
